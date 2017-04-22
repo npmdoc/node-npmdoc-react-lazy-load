@@ -1,0 +1,294 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/loktar00/react-lazy-load#readme"
+
+    >react-lazy-load (v3.0.12)</a>
+</h1>
+<h4>Simple lazy loading component built with react</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-lazy-load">module react-lazy-load</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-lazy-load.default">
+            function <span class="apidocSignatureSpan">react-lazy-load.</span>default
+            <span class="apidocSignatureSpan">(props)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-lazy-load.</span>getElementPosition</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-lazy-load.</span>inViewport</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-lazy-load.</span>parentScroll</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-lazy-load.getElementPosition">module react-lazy-load.getElementPosition</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-lazy-load.getElementPosition.default">
+            function <span class="apidocSignatureSpan">react-lazy-load.getElementPosition.</span>default
+            <span class="apidocSignatureSpan">(element)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-lazy-load.inViewport">module react-lazy-load.inViewport</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-lazy-load.inViewport.default">
+            function <span class="apidocSignatureSpan">react-lazy-load.inViewport.</span>default
+            <span class="apidocSignatureSpan">(element, container, customOffset)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-lazy-load.parentScroll">module react-lazy-load.parentScroll</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-lazy-load.parentScroll.default">
+            function <span class="apidocSignatureSpan">react-lazy-load.parentScroll.</span>default
+            <span class="apidocSignatureSpan">(element)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-lazy-load" id="apidoc.module.react-lazy-load">module react-lazy-load</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-lazy-load.default" id="apidoc.element.react-lazy-load.default">
+        function <span class="apidocSignatureSpan">react-lazy-load.</span>default
+        <span class="apidocSignatureSpan">(props)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function LazyLoad(props) {
+  _classCallCheck(this, LazyLoad);
+
+  var _this = _possibleConstructorReturn(this, (LazyLoad.__proto__ || Object.getPrototypeOf(LazyLoad)).call(this, props));
+
+  _this.lazyLoadHandler = _this.lazyLoadHandler.bind(_this);
+
+  if (props.throttle &#x3e; 0) {
+    if (props.debounce) {
+      _this.lazyLoadHandler = (0, _lodash2.default)(_this.lazyLoadHandler, props.throttle);
+    } else {
+      _this.lazyLoadHandler = (0, _lodash4.default)(_this.lazyLoadHandler, props.throttle);
+    }
+  }
+
+  _this.state = { visible: false };
+  return _this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-lazy-load.getElementPosition" id="apidoc.module.react-lazy-load.getElementPosition">module react-lazy-load.getElementPosition</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-lazy-load.getElementPosition.default" id="apidoc.element.react-lazy-load.getElementPosition.default">
+        function <span class="apidocSignatureSpan">react-lazy-load.getElementPosition.</span>default
+        <span class="apidocSignatureSpan">(element)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getElementPosition(element) {
+  var rect = element.getBoundingClientRect();
+
+  return {
+    top: rect.top + window.pageYOffset,
+    left: rect.left + window.pageXOffset
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-lazy-load.inViewport" id="apidoc.module.react-lazy-load.inViewport">module react-lazy-load.inViewport</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-lazy-load.inViewport.default" id="apidoc.element.react-lazy-load.inViewport.default">
+        function <span class="apidocSignatureSpan">react-lazy-load.inViewport.</span>default
+        <span class="apidocSignatureSpan">(element, container, customOffset)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function inViewport(element, container, customOffset) {
+  if (isHidden(element)) {
+    return false;
+  }
+
+  var top = void 0;
+  var bottom = void 0;
+  var left = void 0;
+  var right = void 0;
+
+  if (typeof container === &#x27;undefined&#x27; || container === window) {
+    top = window.pageYOffset;
+    left = window.pageXOffset;
+    bottom = top + window.innerHeight;
+    right = left + window.innerWidth;
+  } else {
+    var containerPosition = (0, _getElementPosition2.default)(container);
+
+    top = containerPosition.top;
+    left = containerPosition.left;
+    bottom = top + container.offsetHeight;
+    right = left + container.offsetWidth;
+  }
+
+  var elementPosition = (0, _getElementPosition2.default)(element);
+
+  return top &#x3c;= elementPosition.top + element.offsetHeight + customOffset.top &#x26;&#x26; bottom &#x3e;= elementPosition.top - customOffset.bottom
+ &#x26;&#x26; left &#x3c;= elementPosition.left + element.offsetWidth + customOffset.left &#x26;&#x26; right &#x3e;= elementPosition.left - customOffset.right
+;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-lazy-load.parentScroll" id="apidoc.module.react-lazy-load.parentScroll">module react-lazy-load.parentScroll</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-lazy-load.parentScroll.default" id="apidoc.element.react-lazy-load.parentScroll.default">
+        function <span class="apidocSignatureSpan">react-lazy-load.parentScroll.</span>default
+        <span class="apidocSignatureSpan">(element)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function scrollParent(element) {
+  if (!(element instanceof HTMLElement)) {
+    return window;
+  }
+
+  var parent = element;
+
+  while (parent) {
+    if (parent === document.body || parent === document.documentElement) {
+      break;
+    }
+
+    if (!parent.parentNode) {
+      break;
+    }
+
+    if (/(scroll|auto)/.test(overflow(parent))) {
+      return parent;
+    }
+
+    parent = parent.parentNode;
+  }
+
+  return window;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
